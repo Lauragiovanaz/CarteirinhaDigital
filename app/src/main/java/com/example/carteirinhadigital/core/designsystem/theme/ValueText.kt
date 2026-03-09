@@ -1,4 +1,4 @@
-package com.example.carteirinhadigital.ui.theme
+package com.example.carteirinhadigital.core.designsystem.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
