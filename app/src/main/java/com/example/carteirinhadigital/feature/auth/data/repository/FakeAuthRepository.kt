@@ -9,7 +9,7 @@ class FakeAuthRepository : AuthRepository {
         return if (usuario == "aluno" && senha == "aluno1234") {
             UsuarioLogado(
                 id = "001",
-                nome = "Aluno SENAI",
+                nome = "Kauanne Oliveira",
                 token = "fake-token-senai-2024"
             )
         } else {
