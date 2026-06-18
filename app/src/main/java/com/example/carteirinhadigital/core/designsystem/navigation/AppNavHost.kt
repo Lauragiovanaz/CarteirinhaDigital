@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Badge
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -21,6 +22,7 @@ import com.example.carteirinhadigital.core.session.LoggedUser
 import com.example.carteirinhadigital.feature.auth.presentation.screen.LoginScreen
 import com.example.carteirinhadigital.feature.carteirinha.presentation.screen.CarteirinhaScreen
 import com.example.carteirinhadigital.feature.home.presentation.screen.HomeScreen
+import com.example.carteirinhadigital.feature.unidadecurricular.presentation.screen.UnidadeCurricularScreen
 
 @Composable
 fun AppNavHost(
@@ -57,7 +59,14 @@ fun AppNavHost(
             icon = Icons.Default.Badge,
             selected = currentRoute == Routes.Carteirinha.route,
             onClick = { navigateTo(Routes.Carteirinha.route) }
+        ),
+        AppDrawerItem(
+            label = "Unidades Curriculares",
+            icon = Icons.Default.MenuBook,
+            selected = currentRoute == Routes.UnidadesCurriculares.route,
+            onClick = { navigateTo(Routes.UnidadesCurriculares.route) }
         )
+
     )
 
     @Composable
@@ -103,9 +112,8 @@ fun AppNavHost(
                     drawerItems = drawerItems(),
                     onLogoutClick = { logout() },
                     modifier = Modifier.fillMaxSize(),
-                    onCarteirinhaClick = {
-                        navController.navigate(Routes.Carteirinha.route)
-                    }
+                    onCarteirinhaClick = {  navController.navigate(Routes.Carteirinha.route) },
+                    onUnidadesClick = { navController.navigate(Routes.UnidadesCurriculares.route) }
                 )
             }
         }
@@ -119,6 +127,19 @@ fun AppNavHost(
                     onLogoutClick = { logout() },
                     modifier = Modifier.fillMaxSize(),
                     onBackClick = { navController.popBackStack() }
+                )
+            }
+        }
+
+        composable(Routes.UnidadesCurriculares.route) {
+            authenticatedContent { user ->
+                UnidadeCurricularScreen(
+                    usuarioNome = user.nome,
+                    usuarioDescricao = user.descricao,
+                    drawerItems = drawerItems(),
+                    onLogoutClick = { logout() },
+                    onBackClick = { navController.popBackStack() },
+                    modifier = Modifier.fillMaxSize()
                 )
             }
         }
