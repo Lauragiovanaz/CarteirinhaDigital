@@ -7,7 +7,7 @@ class FakeCarteirinhaRepository : CarteirinhaRepository {
     override suspend fun getCarteirinha(usuarioId: String): Carteirinha? {
         delay(1000)
         return Carteirinha(
-            nome = "Aluno SENAI",
+            nome = "Kauanne Oliveira",
             curso = "Desenvolvimento de Sistemas",
             turma = "4DS-VM-T1",
             matricula = "20240001",
