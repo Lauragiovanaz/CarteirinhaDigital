@@ -9,11 +9,11 @@ class FakeCarteirinhaRepository : CarteirinhaRepository {
         return Carteirinha(
             nome = "Kauanne Oliveira",
             curso = "Desenvolvimento de Sistemas",
-            turma = "4DS-VM-T1",
-            matricula = "20240001",
-            unidade = "SENAI Suíço",
+            turma = "4DEVM",
+            matricula = "20260001",
+            unidade = "SENAI Anchieta",
             status = "Ativo",
-            qrCodeContent = "SENAI:20240001:Aluno SENAI:Desenvolvimento de Sistemas"
+            qrCodeContent = "SENAI:20260001:Aluno SENAI:Desenvolvimento de Sistemas"
         )
     }
 }
