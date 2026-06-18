@@ -25,7 +25,7 @@ fun PerfilAluno(modifier: Modifier = Modifier) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(R.drawable.perfil),
+            painter = painterResource(R.drawable.fotoperfil),
             contentDescription = "Foto de perfil",
             contentScale = ContentScale.Crop,
             modifier = Modifier
