@@ -25,6 +25,7 @@ import com.example.carteirinhadigital.R
 fun HomeContent(
     usuarioNome: String,
     onCarteirinhaClick: () -> Unit,
+    onUnidadesClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -61,6 +62,13 @@ fun HomeContent(
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Abrir Carteirinha")
+        }
+
+        OutlinedButton(
+            onClick = onUnidadesClick,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Ver Unidades Curriculares")
         }
     }
 }

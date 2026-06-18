@@ -14,6 +14,7 @@ fun HomeScreen(
     drawerItems: List<AppDrawerItem>,
     onLogoutClick: () -> Unit,
     onCarteirinhaClick: () -> Unit,
+    onUnidadesClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     AppScaffold(
@@ -27,6 +28,7 @@ fun HomeScreen(
         HomeContent(
             usuarioNome = usuarioNome,
             onCarteirinhaClick = onCarteirinhaClick,
+            onUnidadesClick = onUnidadesClick,
             modifier = modifier
                 .fillMaxSize()
                 .padding(innerPadding)
