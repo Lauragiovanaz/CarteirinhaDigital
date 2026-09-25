@@ -7,13 +7,13 @@ class FakeCarteirinhaRepository : CarteirinhaRepository {
     override suspend fun getCarteirinha(usuarioId: String): Carteirinha? {
         delay(1000)
         return Carteirinha(
-            nome = "Kauanne Oliveira",
+            nome = "Laura Giovanaz",
             curso = "Desenvolvimento de Sistemas",
-            turma = "4DEVM",
-            matricula = "20260001",
+            turma = "3DEVEST",
+            matricula = "00001116684792",
             unidade = "SENAI Anchieta",
             status = "Ativo",
-            qrCodeContent = "SENAI:20260001:Aluno SENAI:Desenvolvimento de Sistemas"
+            qrCodeContent = "SENAI:00001116684792:Aluno SENAI:Desenvolvimento de Sistemas"
         )
     }
 }
